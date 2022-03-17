@@ -1,0 +1,21 @@
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "targets": {
+                "ie" : "11",
+                "edge" : "89",
+                "firefox" : "92",
+                "chrome" : "90",
+                "opera" : "76",
+                "safari" : "15"
+
+            }
+        }],
+        
+        "@babel/react"  //별다른 옵션이 없을때 이렇게 적어준다.
+
+    ],
+    "plugins" : [
+
+    ]
+}

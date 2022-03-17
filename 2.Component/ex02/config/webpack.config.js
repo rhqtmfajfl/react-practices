@@ -1,0 +1,41 @@
+const path = require('path');
+
+module.exports = function(env) { 
+    return {
+        mode: 'development',
+        entry: path.resolve(`src/${env.src}/index.js`),
+        output: {
+            path: path.resolve('public'),
+            filename: 'main.js',
+            assetModuleFilename: 'assets/images/[hash][ext]'
+        },
+        module: {
+            rules:[{
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                options: {
+                    configFile: path.resolve('config/babel.config.json')
+                }
+            }, {
+                test: /\.(sa|sc|c)ss$/i,
+                use: [
+                    'style-loader',
+                    // 보통은 moduleㄴ에 기본적으로 true라고 준다.
+                    {loader: 'css-loader', options: {modules: env['css-modules'] !== 'false'}},
+                    'sass-loader']
+            }, {
+                test: /\.(png|git|jpe?g|svg|ico|tiff?|bmp)$/i,
+                type: 'asset/resource'
+            }]
+        },
+        devServer: {
+            host: '0.0.0.0',
+            port: 9090,
+            liveReload: true,
+            hot: false,
+            compress: true,
+            historyApiFallback: true
+        } 
+    };
+}
