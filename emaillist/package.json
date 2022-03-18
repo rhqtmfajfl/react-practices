@@ -1,10 +1,10 @@
 {
-  "name": "ex04",
+  "name": "emaillist",
   "version": "1.0.0",
-  "description": "ex04: Component - State",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env",
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development",
     "build": "npx webpack"
   },
   "keywords": [],
@@ -25,9 +25,6 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.0",
-    "@fortawesome/free-solid-svg-icons": "^6.1.0",
-    "@fortawesome/react-fontawesome": "^0.1.18",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
