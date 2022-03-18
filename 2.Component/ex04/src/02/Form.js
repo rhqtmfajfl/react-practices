@@ -33,7 +33,7 @@ export default function Form() {
         setEmail(e.target.value);  //이렇게 하면 value 값이 없어도 들어가지만 굳이 필용는 하나?
 
         //g는 이형식에 맞아야 된다는의미
-        const re = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$//g;
+        const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
         //사용방법
         setValidEmail(rs.test(e.target.value));  //true이면 정규식에 맞는것 아니면 false
 

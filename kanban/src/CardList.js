@@ -16,7 +16,9 @@ const CardList = ({title, cards}) => {
         <h1>{title}</h1>
         {cards.map( card => <Card
                                   key ={card.no}
-                                  />)}
+                                  title={card.title}
+                                  description={card.description}
+                                  tasks={card.tasks}/>)}
      
     </div>
     

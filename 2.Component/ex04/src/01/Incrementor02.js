@@ -22,6 +22,8 @@ export default function ({ begin, step }) {
     //그래서 첫번째를 val 두번째를 setVal 로 주면 밑에 return 부분과 같이 사용가능하다.
     const [Val, setVal] = useState(begin);  
 
+    console.log("!!!!");
+
     return (
         <div>
             <button onClick={e => setVal(val+step)}>

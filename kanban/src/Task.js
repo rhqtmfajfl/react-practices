@@ -1,8 +1,12 @@
 import React from 'react'
-
-const Task = () => {
+import styles from './assets/css/TaskList.css'
+const Task = ({name,done}) => {
   return (
-    <div>Task</div>
+    <div className={styles.TaskList__Task}>
+      <input type="checkbox" defaultChecked ={done}></input>
+      {name}<a href="" className={styles.TaskList__Task__remove}></a>
+      </div>
+      
   )
 }
 
