@@ -15,7 +15,11 @@ ex04: State***
 
 ex05: Component Lifecycle
 
-ex06: Immutability of Component`s State
+ex06: Immutability(불변성) of Component`s State
+새로운 객체를 만들어서  [] 상태객체 내부를 변화시키는것이 아니라
+새로운 객체를 만든다.
+
+함수형 프로그래밍 f(y) 가 있으면 y에 x 들어와서 새로운것을 만들어내지 y를 변화시키지 않는다.
 
 //AJAX : XMLHttpRequest, $.ajax
 

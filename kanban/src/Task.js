@@ -10,6 +10,8 @@ const Task = ({name,done}) => {
     // console.log(e.target.value);
     // console.log(stateDone);
 
+    //onClick={e=> setStateDone(!stateDone)}
+
 
     if(stateDone ===false){
       setStateDone(true);

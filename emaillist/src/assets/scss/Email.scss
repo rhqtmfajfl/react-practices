@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+:global(.App){
+    //Emaillist 밑에 있는
+    // .Emaillist { //이부분 사용하면 Emaillist.scss에 있는것과 중복되어 버린다 해싱이 다르게 된다.
+        //li 를 다 Email로 바꾼다.  //.Emaillist .li
+        .Email{
+            position: relative;
+            background: #fff;
+            width: 298px;
+            margin: 0 auto 10px auto;
+            overflow: auto;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+
+            h4 {
+                padding: 5px 0;
+            }
+            
+            span {
+                display: block;
+                padding: 0 0 5px 0;
+            }
+            
+            a {
+                position: absolute;
+                width: 10px;
+                border: 1px solid #e5e5e5;
+                top: 5px;
+                right: 5px;
+                text-decoration: none;
+                color: #fff;
+                background-color: #e5e5e5;
+                font-weight: bold;
+                text-align: center;
+                line-height: 8px;
+                padding-top: 2px;
+                
+                //의사기 때문에 a 를 & 로 바꿔준다.
+                //scss에서 하이라키 해줄때는 밑이지만 n&로 사용한다.
+                &:before {
+                    content:'X'
+                }
+                
+                &:hover,
+                &:visited,
+                &:active {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+            }
+        }
+    // }
+}
+
+

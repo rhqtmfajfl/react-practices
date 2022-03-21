@@ -9,8 +9,7 @@ const Card = ({title, description,tasks}) => {
     <div className={styles.Card}>
     <div 
       className={showDetails ? styles.Card__Title__open : styles.Card__Title}
-      onClick={() => {
-        setShowDetails(!showDetails);
+      onClick={() => { setShowDetails(!showDetails);
       }}>
         {title}</div>
     {
