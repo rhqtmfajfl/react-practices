@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './assets/scss/Emaillist.scss';
 import Email from './Email';
 
-const Emaillist = ({emails}) => {
+export default function  Emaillist({emails}){
 
   //map으로 컴포넌트 배열을   만든다.
 
@@ -20,4 +20,9 @@ const Emaillist = ({emails}) => {
   )
 }
 
-export default Emaillist
+// export default Emaillist
+
+Emaillist.propTypes= {
+  emails: PropThpes.arrayOf(ProtoTypes.shape(Email.propType)) 
+   //배열안의 객체 shape으로 정의
+}

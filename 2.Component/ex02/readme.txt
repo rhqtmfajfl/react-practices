@@ -51,7 +51,7 @@ preset.env 자바 스크립트와 관련된것
 
 preset-react 자바스크립트를 바꿔주는것
 
-$ npm i react react-dom 
+$ npm i react react-dom prop-types
 설정
 
     a. config/babel.conig.json 설정

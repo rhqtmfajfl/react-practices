@@ -13,7 +13,7 @@ ex01 : Property
 
 02. FoodList src/01 : 클래스 컴포넌트
 
-03. FoodList src/02 : Data Flow(Top -> Down) : 클래스 컴포넌트
+03. FoodList src/02 : Data Flow(Top -> Down) : 클래스 컴포넌트   //this state로 접근
 
 04. FoodList src/03 : Data Flow(Top -> Down) : 함수 컴포넌트
 
@@ -25,7 +25,7 @@ preset.env 자바 스크립트와 관련된것
 
 preset-react 자바스크립트를 바꿔주는것
 
-$ npm i react react-dom 
+$ npm i react react-dom prop-types
 
 설정
 
