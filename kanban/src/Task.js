@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import styles from './assets/css/TaskList.css'
 
-const Task = ({name,done}) => {
+export default function Task ({name,done}) {
   const [stateDone, setStateDone] = useState(done) //여기서 초기값이 true 또는 false로 들어가 있따.
   // console.log("===여기는 useState");
   // console.log(stateDone, setStateDone);
@@ -35,4 +35,3 @@ const Task = ({name,done}) => {
   )
 }
 
-export default Task

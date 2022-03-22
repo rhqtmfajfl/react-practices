@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import styles from './assets/css/Card.css';
 import TaskList from './TaskList'
+import PropTypes from 'prop-types';
 
-const Card = ({title, description,tasks}) => {
+export default function Card ({title, description,tasks}) {
   const [showDetails, setShowDetails] = useState(false);
   
   return (
@@ -27,4 +28,8 @@ const Card = ({title, description,tasks}) => {
   )
 }
 
-export default Card
+Card.propType = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
+}
