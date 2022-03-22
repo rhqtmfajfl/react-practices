@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './assets/scss/Email.scss';
+import PropTypes from 'prop-types';
 
 
 export default function Email({firstName, lastName, email}) {
@@ -11,3 +12,9 @@ export default function Email({firstName, lastName, email}) {
     );
 }
 
+
+Ema.propType = { 
+    firstName: PropTypes.string.isRequired,
+    lastName : PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
+}

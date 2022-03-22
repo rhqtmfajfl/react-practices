@@ -18,5 +18,4 @@ export default function SearchBar({callback}) {
 
 SearchBar.propTypes ={
   callback: PropTypes.func.isRequired
-
 }

@@ -23,6 +23,6 @@ export default function  Emaillist({emails}){
 // export default Emaillist
 
 Emaillist.propTypes= {
-  emails: PropThpes.arrayOf(ProtoTypes.shape(Email.propType)) 
-   //배열안의 객체 shape으로 정의
+  emails: PropTypes.arrayOf(PropTypes.shape(Email.propType))
+     //배열안의 객체 shape으로 정의
 }
