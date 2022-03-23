@@ -30,5 +30,6 @@ export default function CardList({title, cards}) {
 
 
 CardList.propTypes = {
+  title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.shape(Card.propType))
 }

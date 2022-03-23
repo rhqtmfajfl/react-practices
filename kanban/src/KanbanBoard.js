@@ -4,9 +4,9 @@ import styles from './assets/css/KanbanBoard.css';
 import cards from './data.json';
 
 const KanbanBoard = () => {
-  console.log("===여기는 cards===");
-  console.log(cards);
-  console.log("===여기는 cards===");
+  // console.log("===여기는 cards===");
+  // console.log(cards);
+  // console.log("===여기는 cards===");
 
   // const [datas, setDatas] = useState(cards);
 

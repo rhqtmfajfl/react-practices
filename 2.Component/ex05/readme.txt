@@ -1,10 +1,30 @@
 ex05 : Component - Lifecycle
 
 (예제들)
-01: Class Component
-  
+01: Class Component LifeCircle
+  1) Lifecycle I : mount
+    (순서)
+    [1]constructor
+    [2]getDerivedStateFromProps : props로 받아온 값을 state에 동기화한다.(react v16.3)
+    [3]render() (V-DOM에 트리 생성)
+    *componentDidMount: 컴포넌트 생성을 마치고 렌더링 작업이 끝난 후,
+
+  2) Lifecycle II : update
+    [1] getDerivedStateFromProps : props로 받아온 값을 state에 동기화한다.(react v16.3)
+    [2] shouldComponentUpdate :  props나 state을 변경 했을 때, 리렌더링 여부를 결정한다.
+    [3] render
+    [4] getDerivedStateFromProps : 메소드 호출 후, DOM에 변화를 반영하기 직전에 호출 [react v16.3]
+     *componentDidUpdate: DOM 업데이트가 끝난 직 후 호출된다. DOM 작업이 가능하다.
+
+  3) Lifecycle III : Unmount 
+     *componentWillUnmount : 컴포넌트를 DOM에서 제거하기 전
+      
 
 02. Alternative(대용) : Function Component Lifecycle : useEffect Hook -(Component에서의 라이프 사이클을 알아봐야 한다. class Component보다 사용하기 ㅈㅎ은)
+
+
+
+
 
  
  

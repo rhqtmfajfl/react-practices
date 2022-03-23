@@ -7,7 +7,7 @@ export default class LifeCircle extends Component {
         super(...arguments);
         this.h3Ref = null;
         this.state = {  //property를 동기화 한다.
-            color: null
+            color: null  //여기서 처음 검은색이 들어간다.
         }
 
         console.log('[MOUNT01]: constructor()');
@@ -33,7 +33,7 @@ export default class LifeCircle extends Component {
      */
     shouldComponentUpdate(nextProps, nextState) {
         console.log(`[UPDATE02]: shouldComponentUpdate(nextProps=${nextProps.color}, nextState=${nextState.color})`)
-        return true;
+        return true;  //여기서 ture가 반환이 되면 render로 간다.
     }
 
     render() {
@@ -58,11 +58,16 @@ export default class LifeCircle extends Component {
      *  DOM 업데이트가 끝난 직후 호출 DOM 작업이 가능하다.
      *  변경 전의 state 값과 props값에 접근 가능
      */
+
+    //RGB(10, 20, 30)  -> "10, 20, 30" 숫자랑 , 말고는 다 제거해라 (/[^\d,]/g, '').
+    //##FF1908
+    // (s, e) => s + ('0' + e.toString(16)).slice(-2) 함수 부분 
+    // "#" 초기값
+    // 초기값 S는 "#"  // "#  0a  14 1d "
     componentDidUpdate(prevProps, prevState, snapshot) {
         // console.log(`[UPDATE05]: componentDidUpdate(prevProps=${prevProps.color}, prevState=${prevState.color}, snapshot=${snapshot})`);
-
         const hexColor = snapshot.replace(/[^\d,]/g, '').split(',').map(e => parseInt(e)).reduce((s, e) => s + ('0' + e.toString(16)).slice(-2), "#");
-        //   "10, 20, 30" -> [10, 20, 30] -> reduce( '#' -> '#0a' -> '#0af5' -> '#0xf5ee')
+        //   "RGB(10, 20, 30)" -> "10, 20, 30" -> ["10", "20", "30"] -> [10, 20, 30] -> reduce( '#' -> '#0a' -> '#0af5' -> '#0xf5ee')
 
         console.log(`[UPDATE05]: componentDidUpdate(prevProps=${prevProps.color}, prevState=${prevState.color}, snapshot=${hexColor})`);
     }

@@ -13,7 +13,7 @@ export default function Email({firstName, lastName, email}) {
 }
 
 
-Ema.propType = { 
+Email.propType = { 
     firstName: PropTypes.string.isRequired,
     lastName : PropTypes.string.isRequired,
     email: PropTypes.string.isRequired
