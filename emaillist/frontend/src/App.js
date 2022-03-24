@@ -10,7 +10,7 @@ import data from './assets/json/data.json';
 
 const App = () => {
     //Appㅁ를 모듈로 안받으면 해싱이 안되게 하려면 :global을 사용한다. 그러면 여기서 그냥 App 사용 가능
-    const [emails, setEmails] = useState(data);
+    const [emails, setEmails] = useState([]);
 
     useEffect(async () => {
       const response = await fetch('/api', {
@@ -22,7 +22,21 @@ const App = () => {
         body: null
       });
 
-      console.log(response);
+      // console.log(response);
+
+      if(!response.ok){
+       console.log("error:", response.status, response.statusText);
+       return; 
+      }
+
+
+      const json = await response.json();
+
+      if(json.result !== 'success'){
+        console.log("error:", json.message);
+       return; 
+      }
+
   }, []);
 
     const notifyKeywordChange = function(kw) {
