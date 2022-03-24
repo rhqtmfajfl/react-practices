@@ -7,20 +7,33 @@ ex05 : Component - Lifecycle
     [1]constructor
     [2]getDerivedStateFromProps : props로 받아온 값을 state에 동기화한다.(react v16.3)
     [3]render() (V-DOM에 트리 생성)
-    *componentDidMount: 컴포넌트 생성을 마치고 렌더링 작업이 끝난 후,
+    [4] *componentDidMount: 컴포넌트 생성을 마치고 렌더링 작업이 끝난 후,
 
   2) Lifecycle II : update
     [1] getDerivedStateFromProps : props로 받아온 값을 state에 동기화한다.(react v16.3)
     [2] shouldComponentUpdate :  props나 state을 변경 했을 때, 리렌더링 여부를 결정한다.
     [3] render
     [4] getDerivedStateFromProps : 메소드 호출 후, DOM에 변화를 반영하기 직전에 호출 [react v16.3]
-     *componentDidUpdate: DOM 업데이트가 끝난 직 후 호출된다. DOM 작업이 가능하다.
+    [5] *componentDidUpdate: DOM 업데이트가 끝난 직 후 호출된다. DOM 작업이 가능하다.
 
   3) Lifecycle III : Unmount 
      *componentWillUnmount : 컴포넌트를 DOM에서 제거하기 전
       
+  4) 예제 
+      src/01
 
 02. Alternative(대용) : Function Component Lifecycle : useEffect Hook -(Component에서의 라이프 사이클을 알아봐야 한다. class Component보다 사용하기 ㅈㅎ은)
+  getDerivedStateFromProps 함수 대체
+  1) 1. Alternative 01: getDerivedStateFromProps
+  2) 2. After Rendering 함수 - (랜더링 다음에 진행)
+  3) 3. 어떤 특정 상태(boxColor)의 변화에 반응하는 After Rendering 함수 - 관심 분리
+  4) Alternative : componentDidMount & componentWillUnmount
+  5) 예제
+     src/02
+
+03. Clock Component(Class Component Lifecycle 이용) : src/03
+
+04. Clock Component(useEffect Hook 이용) : src/04 -> [과제](그런데 이미 만들어져 있다.)
 
 
 

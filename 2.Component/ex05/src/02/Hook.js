@@ -37,8 +37,8 @@ export default function Hook({ color }) {
     /**
      *  4. Alternative 02: componentDidMount & componentWillUnmount
      */
-    useEffect(() => {
-        console.log('After Mount(componentDidMount)');
+    useEffect(() => { //여기 함수는 컴포넌트 Did 함수이다.
+        console.log('After Mount(componentDidMount)');  
         return (function(){
             console.log('After Unmount(componentWillUnmount)');
         });
@@ -46,7 +46,9 @@ export default function Hook({ color }) {
         // mount 된것 만 처리하고 싶으면 return 부분의 함수를 뺘준다.
         // userEffect를 이렇게 써라고 페이스 북에서 만듬
     }, []);  //여기는 배열을 넣어 준다. 여기에 빈결 넣어주게 되면   위에 return을 없애주면 처음에 랜더랑 다음에 불려진다.
-    // unMount                                                                                                                                                               
+    // unMount           
+    // 여기는 마운트 된다음에 첫번째 데이터를 가지고 온다음에는 여기에서 가지고 온다. 
+    // return을 해주게 되면 unmount될때 사용된다.                                                                                                                                                     
 
     return (
         <Fragment>
