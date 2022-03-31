@@ -8,35 +8,9 @@ import PropTypes from "prop-types";
 //read도 있따.
 //r c u
 
-export default function TaskList({no, tasks, InsertTask }) {
+export default function TaskList({no, tasks, InsertTask, DeleteTask }) {
 
-  const DeleteTask = async function (task) {
-
-    try {
-      const response = await fetch('/api/delete', {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(task),
-      });
-
-      if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-      }
-
-      const json = await response.json();
-
-      if (json.result !== "success") {
-        throw new Error(`${json.result} ${json.message}`);
-      }
-
-      setTasks([json.data, ...tasks]);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+ 
 
 
   return (

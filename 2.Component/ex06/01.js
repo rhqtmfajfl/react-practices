@@ -10,11 +10,11 @@ let state = {
 
 // console.log(state);
 
-const updateProducts1 = state.order.projects;
+const updateProducts1 = state.order.products;
 updateProducts1.push({
     
         "no": "c002-003",
-        "name": "qmffndidakf",
+        "name": "블루양말",
         "price": 2000,
         "amount": 1
 });

@@ -22,9 +22,9 @@
 	  	</selectKey>	
 	</insert>
 	
-	<delete id="delete" parameterType="taskvo">
+	<delete id="delete" parameterType="long">
 		<![CDATA[
-			delete from task where card_no= #{_parameter}
+			delete from task where no= #{_parameter}
 		]]>
 	</delete>
 	

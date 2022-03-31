@@ -26,8 +26,8 @@ public class KanbanRepository {
 		return sqlSession.insert("task.insert", vo) == 1;		
 	}
 
-	public Boolean delete(TaskVo vo) {
-		return sqlSession.delete("task.delete") == 1;
+	public Boolean delete(Long no) {
+		return sqlSession.delete("task.delete", no) == 1;
 		
 	}
 	

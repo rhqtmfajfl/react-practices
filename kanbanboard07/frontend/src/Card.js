@@ -65,6 +65,33 @@ export default function Card({ no, title, description }) {
     }
   };
 
+  const DeleteTask = async function (no) {
+
+    try {
+      const response = await fetch(`/api/delete/${no}`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(no),
+      });
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+      }
+
+      const json = await response.json();
+
+      if (json.result !== "success") {
+        throw new Error(`${json.result} ${json.message}`);
+      }
+
+      setTasks([json.data, ...tasks]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
 
   return (
@@ -86,7 +113,7 @@ export default function Card({ no, title, description }) {
       {showDetails ? (
         <div className={styles.Card__Details}>
           {description}
-          <TaskList tasks={tasks} InsertTask={InsertTask} no={no}/>
+          <TaskList tasks={tasks} InsertTask={InsertTask} DeleteTask={DeleteTask} no={no}/>
         </div>
       ) : null}
     </div>

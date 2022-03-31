@@ -21,12 +21,12 @@ let emails = this.state.emails;
 emails.push({});
 ```
 
-### How I:
+### How I:   concat 많이 사용중
 1. 비파괴 배열 메소드 및 연산자: map, filter, concat, ...(ES6 spread 연산자 활용)
 2. src/01 참고
 
 ### How II:
-1. Object.assign 을 이용해 변경이 적용된 객체를 새로 생성하는 방법 -> src/02
+1. Object.assign 을 이용해 변경이 적용된 객체를 새로 생성하는 방법 -> src/02  Object.assign은 copy하는데 한게가 있따.
 2. src/02 참고
 
 ### How III:

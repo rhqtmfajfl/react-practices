@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.JsonResult;
 import com.example.demo.repository.KanbanRepository;
-import com.example.demo.vo.TaskVo;
 import com.example.demo.vo.TaskVo;
 
 
@@ -51,24 +51,22 @@ public class ApiController {
 	public ResponseEntity<JsonResult> create(@RequestBody TaskVo vo) {
 		
 		kanbanRepository.insert(vo);
-		System.out.println("vo test ====================================");
-//		System.out.println(vo);
-		System.out.println("vo test ====================================");
+
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(JsonResult.success(vo));
 	}
 	
-	@PostMapping("/delete")  //json 형태로 변환
-	public ResponseEntity<JsonResult> delete(@RequestBody TaskVo vo) {
+	@PostMapping("/delete/{no}")  //json 형태로 변환
+	public ResponseEntity<JsonResult> delete(@PathVariable("no") Long no) {
 		
-		kanbanRepository.delete(vo);
-		System.out.println("vo test ====================================");
-		System.out.println(vo);
+		kanbanRepository.delete(no);
+		System.out.println("no test ====================================");
+		System.out.println(no);
 		System.out.println("gg");
-		System.out.println("vo test ====================================");
+		System.out.println("no test ====================================");
 		return ResponseEntity
 				.status(HttpStatus.OK)
-				.body(JsonResult.success(vo));
+				.body(JsonResult.success(no));
 	}
 }
