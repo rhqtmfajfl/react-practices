@@ -7,6 +7,8 @@ import Guestbook from "./component/Guestbook";
 import About from "./component/About";
 import './assets/scss/App.scss'
 
+//useRouter를 사용하면 옛날 방식으로  ()
+
 export default function App() {
     return (
         <Router>

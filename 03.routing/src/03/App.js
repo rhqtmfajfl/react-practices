@@ -6,7 +6,24 @@ import Gallery from "./component/Gallery";
 import Guestbook from "./component/Guestbook";
 
 export default function App() {
+    //여기서 HashRouter는 함수다.
     return (
-        <div>React Router 라이브러리 사용해 보기</div>
-    );
+            // <HashRouter>
+            //     <Routes>
+            //         <Route path='/' element={<Main />}/>
+            //         <Route path='/gallery' element={<Gallery />}/>
+            //         <Route path='/guestbook' element={<Guestbook />}/>
+
+            //     </Routes>
+            // </HashRouter>
+
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Main />}/>
+                    <Route path='/gallery' element={<Gallery />}/>
+                    <Route path='/guestbook' element={<Guestbook />}/>
+
+                </Routes>
+            </BrowserRouter>
+        );
 }

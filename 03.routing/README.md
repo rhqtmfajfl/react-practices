@@ -4,7 +4,7 @@
 ### ex02: React Router Basic II: HTML5 history API
 ### ex03: React Router Basic III: HashRouter &amp; BrowserRouter
 ### ex04*: React Router Basic V: Link VS NavLink
-### ex05*: Styling &amp; Semantic Markup
+### ex05*: Styling &amp; Semantic Markup    //시맨틱은 html5로 사용해라
 ### ex06*: Composition
 ### ex07: Nesting Routes
 ### ex08: BrowserRouter & SSR

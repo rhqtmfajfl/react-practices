@@ -25,7 +25,28 @@ export default function App() {
 
 
     }, []);
-    return (function(){
+
+    // let component = null;
+
+    // switch(route){
+    //     case '/' :
+    //         component = <Main />;
+    //         break;
+    //     case '/guestbook':
+    //         component = <Guestbook />;
+    //         break;
+    //     case '/gallery':
+    //         component =  <Gallery />;
+    //         break;
+    //     default:
+    //         component = null;
+    //         break;
+    // }
+    // // const f = function(){
+    // // };
+    // return f();
+
+    return (() => {
         switch(route){
             case '/' :
                 return <Main />;
